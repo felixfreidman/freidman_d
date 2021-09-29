@@ -1,0 +1,21 @@
+.header#header-main 
+    .header-container--vertical 
+        .menu-toggler#toggle-open
+            img(src="./assets/images/content/Menu.svg", alt="")
+        .logo
+            a(href="./") 
+                img(src="./assets/images/content/logo.svg", alt="Logo Image")
+.header.header-js--hidden#header-opened
+    .header-container--horizontal 
+        .logo
+            a(href="./") 
+                img(src="./assets/images/content/logo-hor.svg", alt="Logo Image")  
+        .menu-toggler#toggle-close
+            span.cross-one 
+            span.cross-two
+    .header-container
+        .header-navigation 
+            ul.navigation-list 
+                li.navigation-elem Обо мне
+                li.navigation-elem Проекты
+                li.navigation-elem Связаться

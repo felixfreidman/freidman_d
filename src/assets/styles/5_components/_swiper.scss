@@ -1,0 +1,54 @@
+.custom-buttom-prev {
+        background-image: url("./assets/images/content/prev-btn.svg");
+        background-size: contain;
+        width: 8px;
+        height: 15px;
+}
+.custom-buttom-next {
+    background-image: url("./assets/images/content/next-btn.svg");
+    background-size: contain;
+    width: 8px;
+    height: 15px;
+}
+
+
+.home-slide {
+    img {
+        width: 800px;
+        height: 500px;
+    }
+}
+
+.home-wrapper {
+    max-height: 500px;
+}
+.navigation-container {
+    position: absolute;
+    width: 55px;
+    bottom: 0px;
+    right: 150px;
+}
+.pagination-container {
+    position: relative;
+    width: 800px;
+}
+
+.home-container {
+    position: relative;
+    width: 50vw;
+    height: 50px;
+    display: flex;
+}
+
+.swiper-pagination-bullet {
+    background-color: #e1e1e1;
+    width: 25%;
+    border-radius: 0;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: #767676;
+}
+.swiper-pagination {
+    width: 800px;
+}

@@ -1,0 +1,88 @@
+.header {
+    padding: 0 38px;
+    border-right: 1px solid #e1e1e1;
+    display: flex;
+    z-index: 100;
+    .header-container--vertical {
+        margin-top: auto;
+        width: fit-content;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: transform ease 1s;
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .navigation-elem {
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.menu-toggler {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+}
+
+.header-container--horizontal {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    .menu-toggler {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        margin-left: 23px;
+        .cross-one {
+            width: 20px;
+            height: 1.5px;
+            background-color: #000;
+            display: block;
+            transform: rotate(45deg);
+            position: absolute;
+            margin-left: auto;
+            left: 0;
+            margin-right: auto;
+            right: 0;
+        }
+        .cross-two {
+            width: 20px;
+            height: 1.5px;
+            background-color: #000;
+            display: block;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-js--hidden {
+    position: absolute;
+    transform: translateX(-500px);
+}

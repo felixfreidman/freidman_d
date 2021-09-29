@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home Page
+        link(rel="stylesheet", href="style.min.css")
+    body.page-home 
+        include header.pug
+        main.main.main-home
+            .main-container
+                .swiper.home-swiper#home-swiper
+                    .swiper-wrapper.home-wrapper
+                        .swiper-slide.home-slide
+                            img(src="./assets/images/content/homeImage.png", alt="")
+                        .swiper-slide.home-slide
+                            img(src="./assets/images/content/homeImage.png", alt="")
+                        .swiper-slide.home-slide
+                            img(src="./assets/images/content/homeImage.png", alt="")
+                        .swiper-slide.home-slide
+                            img(src="./assets/images/content/homeImage.png", alt="")
+                    .home-container
+                        .pagination-container
+                            .swiper-pagination
+                        .navigation-container
+                            #el-prev.swiper-button-prev.custom-buttom-prev
+                            #el-next.swiper-button-next.custom-buttom-next
+                a(href="./projects", target="_blank").watch-all-container Посмотреть все проекты
+                    
+                
+        include footer.pug
+        script(src="./assets/js/jquery.min.js") 
+        script(src="./assets/js/plugins.min.js") 
+        script(src="./assets/js/main.min.js") 

@@ -1,0 +1,11 @@
+body {
+    font-family: "Montserrat";
+    overflow:hidden;
+    max-width: 100vw;
+}
+
+.page-home {
+    display: flex;
+    padding: 40px 0;
+    min-height: calc(100vh - 80px);
+}
