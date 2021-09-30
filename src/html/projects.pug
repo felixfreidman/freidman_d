@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Projects Page
+        link(rel="stylesheet", href="style.min.css")
+        link(rel="shortcut icon", href="./assets/images/content/favicon.png", type="image/x-icon",sizes="32x32")
+    body.page-home
+        include header.pug
+        main.main.main-projects
+            .page-header Проекты
+            .page-content
+                .projects-filter
+                    span.filter-header Категория
+                    ul.filter-list 
+                        li.filter-elem Маркетинг 
+                        li.filter-elem UI/UX Design 
+                        li.filter-elem Фотография 
+                        li.filter-elem Бизнес 
+                .projects-container
+                    a(href="./template-project.html").project-link 
+                        .project-card 
+                            .project-header Дизайн для сайта БезРиелтора.ру
+                            .project-filter UI/UX Design
+                            .project-image 
+                                img(src="./assets/images/content/projT1.png", alt="")
+                            .project-caption special event or exhibit poster concept for a self-initiated identity project.
+                    a(href="./template-project.html").project-link    
+                        .project-card 
+                            .project-header Дизайн для сайта БезРиелтора.ру
+                            .project-filter UI/UX Design
+                            .project-image 
+                                img(src="./assets/images/content/projT2.png", alt="")
+                            .project-caption special event or exhibit poster concept for a self-initiated identity project.
+                    a(href="./template-project.html").project-link    
+                        .project-card 
+                            .project-header Дизайн для сайта БезРиелтора.ру
+                            .project-filter UI/UX Design
+                            .project-image 
+                                img(src="./assets/images/content/projT2.png", alt="")
+                            .project-caption special event or exhibit poster concept for a self-initiated identity project.
+                    a(href="./template-project.html").project-link    
+                        .project-card 
+                            .project-header Дизайн для сайта БезРиелтора.ру
+                            .project-filter UI/UX Design
+                            .project-image 
+                                img(src="./assets/images/content/projT1.png", alt="")
+                            .project-caption special event or exhibit poster concept for a self-initiated identity project.
+
+        include footer.pug
+        script(src="./assets/js/jquery.min.js") 
+        script(src="./assets/js/plugins.min.js") 
+        script(src="./assets/js/main.min.js")  

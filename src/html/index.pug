@@ -6,6 +6,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Home Page
         link(rel="stylesheet", href="style.min.css")
+        link(rel="shortcut icon", href="./assets/images/content/favicon.png", type="image/x-icon",sizes="32x32")
     body.page-home 
         include header.pug
         main.main.main-home
@@ -26,9 +27,7 @@ html(lang="en")
                         .navigation-container
                             #el-prev.swiper-button-prev.custom-buttom-prev
                             #el-next.swiper-button-next.custom-buttom-next
-                a(href="./projects", target="_blank").watch-all-container Посмотреть все проекты
-                    
-                
+                a(href="./projects.html", target="_blank").watch-all-container Посмотреть все проекты        
         include footer.pug
         script(src="./assets/js/jquery.min.js") 
         script(src="./assets/js/plugins.min.js") 

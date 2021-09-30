@@ -1,3 +1,4 @@
+.header-layer.header-js--hidden#blur-header-layer
 .header#header-main 
     .header-container--vertical 
         .menu-toggler#toggle-open
@@ -5,7 +6,8 @@
         .logo
             a(href="./") 
                 img(src="./assets/images/content/logo.svg", alt="Logo Image")
-.header.header-js--hidden#header-opened
+.header-layer.header-js--hidden#blur-header-layer
+.header.header--100height.header-js--hidden#header-opened
     .header-container--horizontal 
         .logo
             a(href="./") 
@@ -16,6 +18,9 @@
     .header-container
         .header-navigation 
             ul.navigation-list 
-                li.navigation-elem Обо мне
-                li.navigation-elem Проекты
-                li.navigation-elem Связаться
+                li.navigation-elem 
+                    a(href="./about.html")  Обо мне
+                li.navigation-elem 
+                    a(href="./projects.html") Проекты
+                li.navigation-elem
+                    a(href="./contact.html") Связаться

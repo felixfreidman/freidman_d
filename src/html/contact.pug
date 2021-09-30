@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Contact Page
+        link(rel="stylesheet", href="style.min.css")
+        link(rel="shortcut icon", href="./assets/images/content/favicon.png", type="image/x-icon",sizes="32x32")
+    body.page-home
+        include header.pug
+        main.main.main-projects
+            .page-header Связаться
+            .page-content 
+                .contact-content
+                    .form-content 
+                        form(action="").contact-form 
+                            input#nameInput(type="text", name="nameInput", placeholder = "Ваше имя", required).contact-form__input 
+                            input#mailInput(type="email", name="mailInput", placeholder = "Ваша почта", required).contact-form__input 
+                            textarea#commentArea(name="commentArea", cols="30", rows="5", placeholder="Ваше сообщение").contact-form__area
+                            button#contactSubmit.contact-form__submit Отправить
+                    .contact-section
+                        .email-section 
+                            .contact-header Сотрудничество
+                            .contact-text dima-freydman@yandex.ru
+                            .contact-text +79041539460
+
+                        .message-section 
+                            .contact-header Контакты
+                            .contact-text +79041539460
+                            .contact-text Telegram/WhatsApp
+        include footer.pug
+        script(src="./assets/js/jquery.min.js") 
+        script(src="./assets/js/plugins.min.js") 
+        script(src="./assets/js/main.min.js")  

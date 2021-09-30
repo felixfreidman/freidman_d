@@ -1,0 +1,26 @@
+.home-footer {
+    padding-left: 290px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100vw - 320px);
+
+}
+
+.home-footer__creators {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.social-icon {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.home-footer__social-container {
+    display: flex;
+    align-items: center;
+}
