@@ -1,8 +1,16 @@
 .header {
     padding: 0 38px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     border-right: 1px solid #e1e1e1;
     display: flex;
     z-index: 100;
+    background-color: #fff;
+    height: calc(100vh - 80px);
     .header-container--vertical {
         margin-top: auto;
         width: fit-content;

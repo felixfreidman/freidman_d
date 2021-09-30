@@ -11,22 +11,26 @@ toggleClose.addEventListener("click", () => {
     menuOpened.classList.toggle("header-js--hidden");
 });
 var aboutSlider = new Swiper("#home-swiper", {
-    direction: 'horizontal',
+    direction: "horizontal",
+    fadeEffect: { crossFade: true },
+    speed: 1000,
+    slidersPerView: 1,
+    effect: "fade",
     loop: true,
-    effect: 'slide',
-    speed: 300,
-    autoplay: true,
-    delay: 3000,
-  
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+    },
+
     // If we need pagination
     pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination",
         clickable: true,
-      },
-  
+    },
+
     // Navigation arrows
     navigation: {
-      nextEl: '#el-next',
-      prevEl: '#el-prev',
+        nextEl: "#el-next",
+        prevEl: "#el-prev",
     },
-  });
+});
