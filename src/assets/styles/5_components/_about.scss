@@ -66,3 +66,61 @@
 .page-home::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgb(255, 54, 54);
 }
+
+@media screen and (max-width:1200px) {
+    .about-content .about-image {
+        width: 55%;
+    }
+    .about-content .about-text {
+        width: calc(40% - 30px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-content {
+        margin-left: 0;
+    }
+    .about-content .about-image {
+        display: flex;
+        align-items: center;
+    }
+    .about-content .about-image img {
+        height: 60%;
+    }
+    .about-content {
+        display: flex;
+        align-items: center;
+        .about-text {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-content .about-text {
+        width: calc(100% - 30px);
+    }
+    .about-content .about-image {
+        width: 100%;
+        justify-content: center;
+    }
+    .about-content .about-image img {
+        width: 70%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content .about-image img {
+        width: 100%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+}

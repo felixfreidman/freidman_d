@@ -5,7 +5,6 @@
     justify-content: space-between;
     align-items: center;
     width: calc(100vw - 320px);
-
 }
 
 .home-footer__creators {
@@ -23,4 +22,22 @@
 .home-footer__social-container {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .home-footer {
+        padding-left: 150px;
+        width: calc(100vw - 170px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-footer__creators {
+        font-size: 8px;
+    }
+    .social-icon {
+        width: 15px;
+        height: 15px;
+        margin-left: 8px;
+    }
 }
