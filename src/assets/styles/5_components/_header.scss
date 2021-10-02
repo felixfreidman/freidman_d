@@ -168,6 +168,9 @@
     .header-container--index {
         display: none;
     }
+    .header--mobile {
+        display: flex !important;
+    }
     .main {
         width: calc(100vw - 35px);
         padding-left: 35px;
@@ -182,4 +185,125 @@
     .home-footer__creators {
         font-size: 9px !important;
     }
+}
+
+// Mobile Header
+.header--mobile {
+    background-color: #fff;
+    z-index: 103;
+    display: none;
+    padding: 10px 16px 20px;
+    width: calc(100vw - 32px);
+    height: calc(60px - 30px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    .header--mobile__container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            height: 32px;
+            a {
+                height: 32px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .header--mobile__toggler {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        justify-content: space-around;
+        width: 32px;
+        height: 32px;
+        .line-one,
+        .line-two {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 0;
+            margin-left: auto;
+            display: block;
+            width: 24px;
+            height: 1px;
+            background-color: #000;
+            transition: transform 0.1s ease;
+        }
+        .line-three {
+            display: block;
+            margin-top: 14px;
+            width: 24px;
+            height: 1px;
+            background-color: #000;
+            transition: transform 0.1s ease;
+        }
+    }
+}
+
+.line-rotation--clockwise {
+    transform: rotate(45deg);
+    transition: transform 0.1s ease;
+}
+
+.line-rotation--clockwise_counter {
+    transform: rotate(-45deg);
+    transition: transform 0.1s ease;
+}
+
+.line-opacity {
+    animation: opacityForThirdLine 0.1s ease;
+    opacity: 0;
+}
+
+@keyframes opacityForThirdLine {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.header-layer--mobile {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    backdrop-filter: blur(20px);
+    transition: transform 0.5s ease;
+}
+
+.header-list--mobile {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100vw - 20px);
+    z-index: 102;
+    padding: 100px 0 20px 20px;
+    position: fixed;
+    transition: transform 0.8s ease;
+    top: 0;
+    left: 0;
+    .header-nav__link {
+        font-size: 19px;
+        color: #000;
+    }
+}
+
+.header-layer--transform_top {
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease;
+}
+.header-list--transform_top {
+    transform: translateY(-100vh);
+    transition: transform 0.8s ease;
 }
