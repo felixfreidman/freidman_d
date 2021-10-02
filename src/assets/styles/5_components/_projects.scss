@@ -52,11 +52,13 @@
     margin-left: 50px;
     margin-bottom: 40px;
 }
+
 .project-link {
     width: 48%;
     max-width: 48%;
     text-decoration: none;
 }
+
 .project-card {
     width: 100;
     display: flex;
@@ -80,7 +82,6 @@
         height: 100%;
         max-height: 300px;
         margin-bottom: 16px;
-        
         img {
             width: 100%;
             height: 100%;
@@ -91,5 +92,31 @@
         font-size: 14px;
         color: #000;
         line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .project-card .project-header {
+        font-size: 16px;
+    }
+    .project-card .project-filter {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .project-card .project-caption {
+        font-size: 12px;
+        line-height: 16px;
+        color: #000;
+    }
+    .main-projects~.home-footer {
+        width: calc(100vw - 320px);
+        padding-right: 30px;
+        padding-left: 290px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main-projects {
+        
     }
 }

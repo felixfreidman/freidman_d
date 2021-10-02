@@ -67,16 +67,19 @@ var projectSwiper = new Swiper("#project-swiper", {
   }
 }); // Mobile header
 
-var mobileToggler = document.getElementById("mobile-toggler");
+var mоbileToggler = document.getElementById("mobile-toggler");
 var firstLine_Cross = document.getElementById("mobile-line--one");
 var secondLine_Cross = document.getElementById("mobile-line--two");
 var thirdLine_Cross = document.getElementById("mobile-line-three");
 var mobileLayer = document.getElementById("mobile-blur-layer");
 var mobileList = document.getElementById("mobile-list");
-mobileToggler.addEventListener("click", function () {
+mоbileToggler.addEventListener("click", function () {
   firstLine_Cross.classList.toggle("line-rotation--clockwise");
   secondLine_Cross.classList.toggle("line-rotation--clockwise_counter");
   thirdLine_Cross.classList.toggle("line-opacity");
   mobileLayer.classList.toggle("header-layer--transform_top");
   mobileList.classList.toggle("header-list--transform_top");
-});
+}); // var a = 0
+// // while(true) {
+// //     a++;
+// // }
