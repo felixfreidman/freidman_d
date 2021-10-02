@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Project Page
+        link(rel="stylesheet", href="style.min.css")
+        link(rel="shortcut icon", href="./assets/images/content/favicon.png", type="image/x-icon",sizes="32x32")
+    body.page-home
+        include header.pug
+        main.main.main-project
+            .page-header Проекты
+            .page-content
+                .project-content
+                    .project-text 
+                        .text-content 
+                            span.project-content__header Съемка для мужского шоурума
+                            .project-data 
+                                .project-filter Фотография
+                                .project-date Апрель 2017
+                            span.project-content__par
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl. Proin vitae urna eu sem pellentesque laoreet. Mauris varius quam ut libero tempor rutrum. Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare. Nam bibendum cursus viverra. Aenean placerat bibendum quam, eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla. eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla.Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare.Sed quis maximus nunc..
+                            span.project-content__par
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl. Proin vitae urna eu sem pellentesque laoreet. Mauris varius quam ut libero tempor rutrum. Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare. Nam bibendum cursus viverra. Aenean placerat bibendum quam, eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla. eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla.Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare.Sed quis maximus nunc..
+                            span.project-content__par
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl. Proin vitae urna eu sem pellentesque laoreet. Mauris varius quam ut libero tempor rutrum. Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare. Nam bibendum cursus viverra. Aenean placerat bibendum quam, eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla. eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla.Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare.Sed quis maximus nunc..
+                            span.project-content__par
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl. Proin vitae urna eu sem pellentesque laoreet. Mauris varius quam ut libero tempor rutrum. Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare. Nam bibendum cursus viverra. Aenean placerat bibendum quam, eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla. eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla.Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare.Sed quis maximus nunc..
+                            span.project-content__par
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl. Proin vitae urna eu sem pellentesque laoreet. Mauris varius quam ut libero tempor rutrum. Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare. Nam bibendum cursus viverra. Aenean placerat bibendum quam, eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla. eugiat elit tincidunt in. Curabitur nec aliquet erat, et dictum nulla.Sed quis maximus nunc. Nulla eu erat vel nunc consectetur ornare.Sed quis maximus nunc..
+                    .project-image
+                        .swiper.project-swiper#project-swiper
+                            .swiper-wrapper.project-wrapper
+                                .swiper-slide.project-slide
+                                    img(src="./assets/images/content/homeImage.png", alt="")
+                                .swiper-slide.project-slide
+                                    img(src="./assets/images/content/homeImage.png", alt="")
+                                .swiper-slide.project-slide
+                                    img(src="./assets/images/content/homeImage.png", alt="")
+                                .swiper-slide.project-slide
+                                    img(src="./assets/images/content/homeImage.png", alt="")
+                            .project-container
+                                .pagination-container
+                                    .swiper-pagination
+                            .navigation-container--project
+                                #el-prev.swiper-button-prev.custom-buttom-prev
+                                #el-next.swiper-button-next.custom-buttom-next
+                
+
+                
+        include footer.pug
+        script(src="./assets/js/jquery.min.js") 
+        script(src="./assets/js/plugins.min.js") 
+        script(src="./assets/js/main.min.js")  

@@ -1,0 +1,85 @@
+.project-content {
+    display: flex;
+    margin-left: 136px;
+    justify-content: space-between;
+    height: 65vh;
+    width: 100%;
+    .project-text {
+        margin-top: auto;
+        width: calc(40% - 30px);
+        max-height: 400px;
+        height: fit-content;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-right: 30px;
+    }
+    .project-image {
+        width: 55%;
+        height: 60vh;
+        align-self: flex-end;
+    }
+}
+
+.project-content__par {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.project-content__header {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    line-height: 21px;
+    margin-bottom: 6px;
+}
+
+.project-text::-webkit-scrollbar {
+    width: 2px;
+}
+
+.project-text::-webkit-scrollbar-track {
+    background-color: #e1e1e1;
+}
+
+.project-text::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.page-home::-webkit-scrollbar {
+    width: 5px;
+    margin-right: 10px;
+}
+
+.page-home::-webkit-scrollbar-track {
+    background-color: #e1e1e1;
+}
+
+.page-home::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgb(255, 54, 54);
+}
+
+.project-data {
+    display: flex;
+    margin-bottom: 35px;
+    color: #767676;
+    width: 100%;
+    font-size: 12px;
+    .project-filter {
+        width: 20%;
+    }
+    .project-data {}
+}
+
+.main-project {
+    .page-content {
+        height: 70vh;
+    }
+}

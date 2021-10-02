@@ -1,16 +1,16 @@
 .custom-buttom-prev {
-        background-image: url("./assets/images/content/prev-btn.svg");
-        background-size: contain;
-        width: 8px;
-        height: 15px;
+    background-image: url("./assets/images/content/prev-btn.svg");
+    background-size: contain;
+    width: 8px;
+    height: 15px;
 }
+
 .custom-buttom-next {
     background-image: url("./assets/images/content/next-btn.svg");
     background-size: contain;
     width: 8px;
     height: 15px;
 }
-
 
 .home-slide {
     img {
@@ -22,12 +22,14 @@
 .home-wrapper {
     max-height: 500px;
 }
+
 .navigation-container {
     position: absolute;
     width: 55px;
     bottom: 0px;
     right: 0px;
 }
+
 .pagination-container {
     position: relative;
     width: 800px;
@@ -50,12 +52,57 @@
     opacity: 1;
     height: 2px;
 }
+
 .swiper-pagination-bullet-active {
     background-color: #767676;
     height: 4px;
 }
+
 .swiper-pagination {
     width: 600px;
     display: flex;
     align-items: center;
+}
+
+.project-slide {
+    img {
+        width: 400px !important;
+        height: 500px !important;
+    }
+}
+
+.project-wrapper {
+    max-height: 600px;
+}
+
+.navigation-container--project {
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    .custom-buttom-prev {
+        right: 35px;
+        left: auto;
+    }
+}
+
+.pagination-container {
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-container {
+    position: relative;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    .pagination-container {
+        .swiper-pagination {
+            width: 400px;
+        }
+    }
 }
