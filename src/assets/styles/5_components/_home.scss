@@ -16,3 +16,30 @@
     font-weight: 500;
 }
 
+.index-home {
+    .header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .index-home {
+        .header {
+            display: flex;
+        }
+    }
+    .index-home {
+        .header-container--index {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .index-home {
+        .header {
+            display: none !important;
+        }
+    }
+}

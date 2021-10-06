@@ -117,10 +117,11 @@
     left: 0;
     top: 0;
     bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
     max-width: 400px;
     width: 400px;
+    height: calc(100vh - 80px);
 }
 
 .header--index {
@@ -158,11 +159,10 @@
     }
 }
 
-.header-container--index~.home-footer {
-    padding-left: 490px;
-    width: calc(100vw - 520px);
-}
-
+// .header-container--index~.home-footer {
+//     padding-left: 490px;
+//     width: calc(100vw - 520px);
+// }
 @media screen and (max-width:550px) {
     .header,
     .header-container--index {
@@ -303,6 +303,7 @@
     transform: translateY(-100vh);
     transition: transform 0.5s ease;
 }
+
 .header-list--transform_top {
     transform: translateY(-100vh);
     transition: transform 0.8s ease;

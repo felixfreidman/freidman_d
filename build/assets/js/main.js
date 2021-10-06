@@ -27,10 +27,10 @@ var aboutSlider = new Swiper("#home-swiper", {
   slidersPerView: 1,
   effect: "fade",
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true
-  },
+  // autoplay: {
+  //     delay: 3000,
+  //     disableOnInteraction: true,
+  // },
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
