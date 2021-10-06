@@ -98,7 +98,7 @@
 
 @media screen and (max-width: 768px) {
     .about-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
     .about-content .about-text {
@@ -134,6 +134,7 @@
         height: 85%;
     }
 }
+
 @media screen and (max-width: 375px) and (min-height:800px) {
     .about-content .about-image img {
         width: 100%;

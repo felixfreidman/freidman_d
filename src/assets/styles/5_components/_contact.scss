@@ -115,3 +115,16 @@
         margin-bottom: 4px;
     }
 }
+
+@media screen and (max-width: 850px) {
+    .contact-content {
+        margin-left: 0;
+        flex-direction: column-reverse;
+    }
+    .contact-content .form-content {
+        width: 100%;
+    }
+    .contact-content .contact-section {
+        width: 100%;
+    }
+}
