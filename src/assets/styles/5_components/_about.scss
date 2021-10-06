@@ -116,7 +116,27 @@
 
 @media screen and (max-width: 768px) {
     .about-content .about-image img {
-        width: 100%;
+        width: 75%;
         height: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-content .about-image img {
+        width: 90%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-content .about-image img {
+        width: 100%;
+        height: 85%;
+    }
+}
+@media screen and (max-width: 375px) and (min-height:800px) {
+    .about-content .about-image img {
+        width: 100%;
+        height: 70%;
     }
 }

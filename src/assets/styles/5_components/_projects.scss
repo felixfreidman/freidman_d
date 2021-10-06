@@ -116,7 +116,17 @@
 }
 
 @media screen and (max-width: 900px) {
-    .main-projects {
-        
+    .projects-container {
+        flex-direction: column;
+        .project-link {
+            width: 95%;
+            max-width: 95%;
+        }
+    }
+    .project-card .project-header {
+        font-size: 20px;
+    }
+    .project-card .project-caption {
+        font-size: 14px;
     }
 }
