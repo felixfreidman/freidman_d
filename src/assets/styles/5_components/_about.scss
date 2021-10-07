@@ -23,6 +23,7 @@
 }
 
 .text-content__par {
+    display: block;
     margin-bottom: 15px;
     font-size: 16px;
     color: #000;
@@ -35,11 +36,13 @@
 }
 
 .text-content__header {
+    font-family: "Montserrat" !important;
     font-weight: 700;
     font-size: 18px;
     color: #000;
     line-height: 21px;
     margin-bottom: 35px;
+    display: block;
 }
 
 .about-text::-webkit-scrollbar {

@@ -1,7 +1,7 @@
 body {
-    font-family: "Montserrat";
+    font-family: "Montserrat" !important;
     font-weight: 500;
-    overflow-x:hidden;
+    overflow-x: hidden;
     max-width: 100vw;
     min-height: 100vh;
     height: fit-content;
@@ -11,7 +11,7 @@ body {
         text-decoration: none;
         color: #000;
         &:hover {
-            color:#FF3636;
+            color: #FF3636;
         }
     }
 }
@@ -19,8 +19,8 @@ body {
 .page-home {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
     padding: 40px 0;
     min-height: calc(100vh - 80px);
 }
