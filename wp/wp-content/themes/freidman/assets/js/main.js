@@ -81,19 +81,21 @@ mоbileToggler.addEventListener("click", function () {
   mobileList.classList.toggle("header-list--transform_top");
 }); // Mail Send Function
 
-var writeUs = document.getElementById("contact-us");
-var form = $(".form-container");
-form.on("submit", function (event) {
+var writeUs = document.getElementById("contact-form");
+writeUs.addEventListener("submit", sendContactForm);
+
+function sendContactForm(event) {
   event.preventDefault();
-  var vanilaForm = $(this);
-  var formData = vanilaForm.serializeArray();
-  $.ajax({
-    url: "/wp-admin/admin-ajax.php",
-    method: "post",
-    data: formData,
-    action: "ajax_form",
-    success: function success(response) {
-      $("#submit-ajax").html(response);
+  var form = $(this).serializeArray();
+  console.log(form);
+  $.post(myajax.url, {
+    form: form,
+    action: "contact"
+  }, function (data) {
+    alert("Письмо отправлено!");
+
+    for (var i = 0; i < form.length; i++) {
+      form[i].reset();
     }
   });
-});
+}

@@ -56,17 +56,28 @@ Template Name: Contact
         <div class="page-content">
             <div class="contact-content">
                 <div class="form-content">
-                    <?php the_content();?>
+                    <form id="contact-form" class="contact-form"
+                        action="send-form.php"
+                        enctype=”multipart/form-data”
+                        name=”EmailForm”>
+                        <input class="contact-form__input" id="nameInput" type="text" name="nameInput"
+                            placeholder="Ваше имя" required>
+                        <input class="contact-form__input" id="mailInput" type="email" name="mailInput"
+                            placeholder="Ваша почта" required>
+                        <textarea class="contact-form__area" id="commentArea" name="commentArea" cols="30" rows="5"
+                            placeholder="Ваше сообщение"></textarea><button class="contact-form__submit"
+                            id="contactSubmit">Отправить</button>
+                    </form>
                 </div>
                 <div class="contact-section">
                     <div class="email-section">
                         <div class="contact-header">Сотрудничество</div>
-                        <div class="contact-text">dima-freydman@yandex.ru</div>
-                        <div class="contact-text">+79041539460</div>
+                        <div class="contact-text"><?php echo get_field('mail','option')?></div>
+                        <div class="contact-text">+<?php echo get_field('phone','option')?></div>
                     </div>
                     <div class="message-section">
                         <div class="contact-header">Контакты</div>
-                        <div class="contact-text">+79041539460</div>
+                        <div class="contact-text">+<?php echo get_field('phone','option')?></div>
                         <div class="contact-text">Telegram/WhatsApp</div>
                     </div>
                 </div>
