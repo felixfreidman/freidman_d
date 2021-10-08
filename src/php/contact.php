@@ -61,12 +61,12 @@ Template Name: Contact
                 <div class="contact-section">
                     <div class="email-section">
                         <div class="contact-header">Сотрудничество</div>
-                        <div class="contact-text">dima-freydman@yandex.ru</div>
-                        <div class="contact-text">+79041539460</div>
+                        <div class="contact-text"><?php echo get_field('mail','option')?></div>
+                        <div class="contact-text">+<?php echo get_field('phone','option')?></div>
                     </div>
                     <div class="message-section">
                         <div class="contact-header">Контакты</div>
-                        <div class="contact-text">+79041539460</div>
+                        <div class="contact-text">+<?php echo get_field('phone','option')?></div>
                         <div class="contact-text">Telegram/WhatsApp</div>
                     </div>
                 </div>
