@@ -66,40 +66,43 @@ var projectSwiper = new Swiper("#project-swiper", {
 });
 
 // Mobile header
-
-var mоbileToggler = document.getElementById("mobile-toggler");
-var firstLine_Cross = document.getElementById("mobile-line--one");
-var secondLine_Cross = document.getElementById("mobile-line--two");
-var thirdLine_Cross = document.getElementById("mobile-line-three");
-var mobileLayer = document.getElementById("mobile-blur-layer");
-var mobileList = document.getElementById("mobile-list");
-mоbileToggler.addEventListener("click", () => {
-    firstLine_Cross.classList.toggle("line-rotation--clockwise");
-    secondLine_Cross.classList.toggle("line-rotation--clockwise_counter");
-    thirdLine_Cross.classList.toggle("line-opacity");
-    mobileLayer.classList.toggle("header-layer--transform_top");
-    mobileList.classList.toggle("header-list--transform_top");
-});
+if (document.getElementById("mobile-toggler")) {
+    var mоbileToggler = document.getElementById("mobile-toggler");
+    var firstLine_Cross = document.getElementById("mobile-line--one");
+    var secondLine_Cross = document.getElementById("mobile-line--two");
+    var thirdLine_Cross = document.getElementById("mobile-line-three");
+    var mobileLayer = document.getElementById("mobile-blur-layer");
+    var mobileList = document.getElementById("mobile-list");
+    mоbileToggler.addEventListener("click", () => {
+        firstLine_Cross.classList.toggle("line-rotation--clockwise");
+        secondLine_Cross.classList.toggle("line-rotation--clockwise_counter");
+        thirdLine_Cross.classList.toggle("line-opacity");
+        mobileLayer.classList.toggle("header-layer--transform_top");
+        mobileList.classList.toggle("header-list--transform_top");
+    });
+}
 
 // Mail Send Function
-var writeUs = document.getElementById("contact-form");
-writeUs.addEventListener("submit", sendContactForm);
+if (document.getElementById("contact-form")) {
+    var writeUs = document.getElementById("contact-form");
+    writeUs.addEventListener("submit", sendContactForm);
 
-function sendContactForm(event) {
-    event.preventDefault();
-    var form = $(this).serializeArray();
-    console.log(form);
-    $.post(
-        myajax.url, {
-            form: form,
-            action: "contact",
-        },
-        function(data) {
-            alert("Письмо отправлено!");
+    function sendContactForm(event) {
+        event.preventDefault();
+        var form = $(this).serializeArray();
+        console.log(form);
+        $.post(
+            myajax.url, {
+                form: form,
+                action: "contact",
+            },
+            function(data) {
+                alert("Письмо отправлено!");
 
-            for (var i = 0; i < form.length; i++) {
-                form[i].reset();
+                for (var i = 0; i < form.length; i++) {
+                    form[i].reset();
+                }
             }
-        }
-    );
+        );
+    }
 }

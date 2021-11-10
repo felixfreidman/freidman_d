@@ -95,6 +95,10 @@
     }
 }
 
+.projects-filter--mobile {
+    display: none;
+}
+
 @media screen and (max-width: 1024px) {
     .project-card .project-header {
         font-size: 16px;
@@ -211,5 +215,45 @@
     .filter-header {
         font-size: 12px;
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .projects-filter {
+        display: none;
+    }
+    .projects-container {
+        margin-left: 0;
+    }
+    .projects-filter--mobile {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        right: -20px;
+        bottom: -15px;
+        width: 100px;
+        height: 100px;
+        transition: transform 0.5s ease;
+        background-color: #000;
+        border-radius: 50%;
+        &:hover {
+            transform: scale(6);
+            transition: transform 0.5s ease;
+        }
+        .filter-image {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            &:hover {
+                transform: scale(0.1);
+            }
+        }
+        
     }
 }

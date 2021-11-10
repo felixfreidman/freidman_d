@@ -96,6 +96,12 @@ $loop = new WP_Query($mypost);
                 <?php endwhile;?>
                 <?php wp_reset_postdata();?>
             </div>
+            <div class="projects-filter--mobile">
+                <div class="filter-image">
+                    <img src="<?php echo get_template_directory_uri() .  '/assets/images/content/cat.svg' ?>" alt="">
+                </div>
+                
+            </div>
         </div>
     </main>
     <?php get_footer()?>
