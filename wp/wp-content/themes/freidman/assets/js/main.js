@@ -104,3 +104,21 @@ if (document.getElementById("contact-form")) {
   var writeUs = document.getElementById("contact-form");
   writeUs.addEventListener("submit", sendContactForm);
 }
+
+if (document.getElementById("mobileFilterToggler")) {
+  var filterToggler = document.getElementById("mobileFilterToggler");
+  var filterLayer = document.getElementById("mobileFilterLayer");
+  var filterCloser = document.getElementById("mobileFilterCloser");
+  filterToggler.addEventListener("click", function () {
+    filterToggler.classList.toggle("filter--closed");
+    filterToggler.classList.toggle("filter--opened");
+    filterLayer.classList.toggle("filter--opened");
+    filterLayer.classList.toggle("filter--closed");
+  });
+  filterCloser.addEventListener("click", function () {
+    filterToggler.classList.toggle("filter--closed");
+    filterToggler.classList.toggle("filter--opened");
+    filterLayer.classList.toggle("filter--opened");
+    filterLayer.classList.toggle("filter--closed");
+  });
+}

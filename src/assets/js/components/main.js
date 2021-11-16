@@ -106,3 +106,22 @@ if (document.getElementById("contact-form")) {
         );
     }
 }
+
+if (document.getElementById("mobileFilterToggler")) {
+    var filterToggler = document.getElementById("mobileFilterToggler");
+    var filterLayer = document.getElementById("mobileFilterLayer");
+    var filterCloser = document.getElementById("mobileFilterCloser");
+    
+    filterToggler.addEventListener("click", () => {
+        filterToggler.classList.toggle("filter--closed");
+        filterToggler.classList.toggle("filter--opened");
+        filterLayer.classList.toggle("filter--opened");
+        filterLayer.classList.toggle("filter--closed");
+    });
+    filterCloser.addEventListener("click", () => {
+        filterToggler.classList.toggle("filter--closed");
+        filterToggler.classList.toggle("filter--opened");
+        filterLayer.classList.toggle("filter--opened");
+        filterLayer.classList.toggle("filter--closed");
+    });
+}

@@ -40,4 +40,8 @@
         height: 15px;
         margin-left: 8px;
     }
+    .main-about+.footer,
+    .main-contact+.footer {
+        margin-top: 15px;
+    }
 }

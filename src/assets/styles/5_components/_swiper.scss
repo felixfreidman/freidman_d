@@ -12,12 +12,33 @@
     height: 15px;
 }
 
+.project-navigat {
+    .custom-buttom-prev {
+        top: 50px;
+    }
+    .custom-buttom-next {
+        top: 50px;
+    }
+}
+.home-navigat {
+    .custom-buttom-prev {
+        top: 0px;
+    }
+    .custom-buttom-next {
+        top: 0px;
+    }
+}
+
 .home-slide {
-    img {
+    a {
         max-width: 800px;
         max-height: 500px;
         width: 100%;
-        height: 100%;
+        height: 500px;
+        display: block;
+        background-size: cover;
+        border-radius: 22px;
+        background-position: center;
     }
 }
 
@@ -35,6 +56,7 @@
 .pagination-container {
     position: relative;
     width: 800px;
+    height: 50px;
     display: flex;
     align-items: flex-start;
 }
@@ -61,15 +83,19 @@
 }
 
 .swiper-pagination {
-    width: 600px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
 
 .project-slide {
-    img {
-        width: 400px !important;
-        height: 500px !important;
+    .slide-cont {
+        width: 400px;
+        height: 500px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 22px;
     }
 }
 
@@ -91,7 +117,8 @@
 
 .pagination-container {
     position: relative;
-    width: 400px;
+    width: 300px;
+    margin-top: 50px;
     display: flex;
     align-items: flex-start;
 }
@@ -99,12 +126,12 @@
 .project-container {
     position: relative;
     width: 400px;
-    height: 50px;
+    top: 50px;
     display: flex;
     align-items: center;
     .pagination-container {
         .swiper-pagination {
-            width: 400px;
+            width: 100%;
         }
     }
 }
@@ -126,6 +153,19 @@
         align-items: center;
         justify-content: center;
     }
+    .home-slide {
+        a {
+            width: 100%;
+            height: 500px;
+            display: block;
+            background-size: cover;
+            border-radius: 22px;
+        }
+    }
+    .main-container {
+        margin-left: auto;
+        margin-right: 20px;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -139,11 +179,20 @@
     .pagination-container {
         width: 70vw !important;
     }
+    .home-slide {
+        a {
+            width: 100%;
+            height: 300px;
+            display: block;
+            background-size: cover;
+            border-radius: 22px;
+        }
+    }
 }
 
 @media screen and (max-width: 788px) {
     .pagination-container {
-        width: 70vw !important;
+        width: 55vw !important;
         .swiper-pagination {
             width: 100%;
         }
@@ -152,11 +201,29 @@
         width: 70vw;
         height: 100px;
     }
+    .home-slide {
+        a {
+            width: 100%;
+            height: 500px;
+            display: block;
+            background-size: cover;
+            border-radius: 22px;
+        }
+    }
+    .home-navigat {
+        .custom-buttom-prev {
+            top: -30px;
+        }
+        .custom-buttom-next {
+            top: -30px;
+        }
+    }
+    
 }
 
 @media screen and (max-width: 550px) {
     .pagination-container {
-        width: 70vw !important;
+        width: 60vw !important;
         .swiper-pagination {
             width: 100%;
         }
@@ -164,12 +231,6 @@
     .home-container {
         width: calc(90vw - 15px);
         height: 100px;
-    }
-    .pagination-container {
-        width: calc(90vw - 15px) !important;
-        .swiper-pagination {
-            width: 100%;
-        }
     }
     .main-container {
         max-width: calc(90vw - 15px);
@@ -181,5 +242,38 @@
     }
     .watch-all-container {
         font-size: 12px;
+    }
+    .home-slide {
+        a {
+            width: 100%;
+            height: 300px;
+            display: block;
+            background-size: cover;
+            border-radius: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home-slide {
+        a {
+            width: 100%;
+            height: 250px;
+            display: block;
+            background-size: cover;
+            border-radius: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .home-slide {
+        a {
+            width: 100%;
+            height: 200px;
+            display: block;
+            background-size: cover;
+            border-radius: 22px;
+        }
     }
 }

@@ -172,15 +172,15 @@
         display: flex !important;
     }
     .main {
-        width: calc(100vw - 35px);
-        padding-left: 35px;
+        width: calc(100vw - 15px);
+        padding-left: 15px;
     }
     .main-projects {
         align-items: center;
     }
     .home-footer {
         width: calc(100vw - 65px) !important;
-        padding-left: 35px !important;
+        padding-left: 15px !important;
     }
     .home-footer__creators {
         font-size: 9px !important;
@@ -307,4 +307,21 @@
 .header-list--transform_top {
     transform: translateY(-100vh);
     transition: transform 0.8s ease;
+}
+
+@media screen and (max-width: 550px) {
+    .page-header {
+        margin-bottom: 0px !important;
+        margin-top: 60px;
+    }
+    .main-contact {
+        .page-content {
+            margin-top: 175px;
+        }
+    }
+    .main-projects {
+        .page-header {
+            margin-bottom: 30px !important;
+        }
+    }
 }
