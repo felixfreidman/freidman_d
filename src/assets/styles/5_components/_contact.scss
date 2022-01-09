@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: fit-content;
     .form-content {
         width: 55%;
         height: 100%;
@@ -18,7 +18,7 @@
     }
 }
 
-#wpforms-form-87 {
+#wpforms-form-50 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -41,7 +41,7 @@
             ;
         }
     }
-    #wpforms-87-field_2 {
+    #wpforms-50-field_2 {
         outline: none;
         font-size: 12px;
         color: #000;
@@ -70,7 +70,7 @@
             box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         }
     }
-    .contact-form__submit {
+    #wpforms-submit-50 {
         background-color: #000;
         color: #fff;
         padding: 13px 9px;
@@ -119,10 +119,11 @@
 @media screen and (max-width: 850px) {
     .contact-content {
         margin-left: 0;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .contact-content .form-content {
         width: 100%;
+        margin-bottom: 30px;
     }
     .contact-content .contact-section {
         width: 100%;

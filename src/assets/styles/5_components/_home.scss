@@ -6,6 +6,8 @@
 
 .main-container {
     margin-left: 340px;
+    display: flex;
+    flex-direction: column;
 }
 
 .watch-all-container {
@@ -14,12 +16,15 @@
     font-size: 14px;
     line-height: 21px;
     font-weight: 500;
+    align-self: flex-end;
+    margin-right: 65px;
 }
 
 .index-home {
     .header {
         display: none;
     }
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
@@ -34,7 +39,6 @@
         }
     }
 }
-
 
 @media screen and (max-width: 550px) {
     .index-home {

@@ -86,32 +86,31 @@ if (document.getElementById("mobile-toggler")) {
 if (document.getElementById("contact-form")) {
     var writeUs = document.getElementById("contact-form");
     writeUs.addEventListener("submit", sendContactForm);
+}
 
-    function sendContactForm(event) {
-        event.preventDefault();
-        var form = $(this).serializeArray();
-        console.log(form);
-        $.post(
-            myajax.url, {
-                form: form,
-                action: "contact",
-            },
-            function(data) {
-                alert("Письмо отправлено!");
+function sendContactForm(event) {
+    event.preventDefault();
+    var form = $(this).serializeArray();
+    $.post(
+        myajax.url, {
+            form: form,
+            action: "contact",
+        },
+        function(data) {
+            alert("Письмо отправлено!");
 
-                for (var i = 0; i < form.length; i++) {
-                    form[i].reset();
-                }
+            for (var i = 0; i < form.length; i++) {
+                form[i].reset();
             }
-        );
-    }
+        }
+    );
 }
 
 if (document.getElementById("mobileFilterToggler")) {
     var filterToggler = document.getElementById("mobileFilterToggler");
     var filterLayer = document.getElementById("mobileFilterLayer");
     var filterCloser = document.getElementById("mobileFilterCloser");
-    
+
     filterToggler.addEventListener("click", () => {
         filterToggler.classList.toggle("filter--closed");
         filterToggler.classList.toggle("filter--opened");
@@ -124,4 +123,23 @@ if (document.getElementById("mobileFilterToggler")) {
         filterLayer.classList.toggle("filter--opened");
         filterLayer.classList.toggle("filter--closed");
     });
+}
+
+var redirectLocation = "https://dfreidman.ru/onboarding/";
+if (window.innerWidth < 500) {
+    var cookieTime = new Date();
+    cookieTime.setHours(cookieTime.getMinutes() + 30);
+    var values = new Array();
+    if (window.location.href !== redirectLocation) {
+        if (!localStorage.getItem("mobileShown")) {
+            window.location.replace(redirectLocation);
+            values.push("shown");
+            values.push(cookieTime);
+            localStorage.setItem("mobileShown", values);
+        }
+        var clearValues = localStorage.getItem("mobileShown").split(";");
+        if (clearValues[1] < new Date()) {
+            localStorage.removeItem("mobileShown");
+        }
+    }
 }
