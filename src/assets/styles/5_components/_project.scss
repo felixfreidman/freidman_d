@@ -86,7 +86,7 @@
 @media screen and (max-width: 1024px) {
     .project-content {
         .project-image {
-            width: 55%
+            width: 55%;
         }
     }
     .navigation-container--project {
@@ -159,6 +159,10 @@
     }
 }
 
+.watch-all-container {
+    z-index: 1000;
+}
+
 @media screen and (max-width: 550px) {
     .main-project {
         .page-header {
@@ -175,6 +179,10 @@
                 width: 250px !important;
             }
         }
+    }
+    .watch-all-container {
+        margin-right: 10px;
+        z-index: 1000;
     }
     .main-project .project-content .project-slide .slide-cont {
         width: 350px;
@@ -226,4 +234,8 @@
     .main-project .project-content .project-image {
         width: 80%;
     }
+}
+
+.js--hidden {
+    display: none !important;
 }

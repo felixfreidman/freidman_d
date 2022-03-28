@@ -120,27 +120,32 @@ if (document.getElementById("mobileFilterToggler")) {
     filterLayer.classList.toggle("filter--opened");
     filterLayer.classList.toggle("filter--closed");
   });
-}
+} // var redirectLocation = "./onboarding/";
+// if (window.innerWidth < 500) {
+//   var cookieTime = new Date();
+//   cookieTime.setHours(cookieTime.getMinutes() + 30);
+//   var values = new Array();
+//   if (window.location.href !== redirectLocation) {
+//     if (!localStorage.getItem("mobileShown")) {
+//       window.location.replace(redirectLocation);
+//       values.push("shown");
+//       values.push(cookieTime);
+//       localStorage.setItem("mobileShown", values);
+//     }
+//     var clearValues = localStorage.getItem("mobileShown").split(";");
+//     if (clearValues[1] < new Date()) {
+//       localStorage.removeItem("mobileShown");
+//     }
+//   }
+// }
 
-var redirectLocation = "https://dfreidman.ru/onboarding/";
 
-if (window.innerWidth < 500) {
-  var cookieTime = new Date();
-  cookieTime.setHours(cookieTime.getMinutes() + 30);
-  var values = new Array();
-
-  if (window.location.href !== redirectLocation) {
-    if (!localStorage.getItem("mobileShown")) {
-      window.location.replace(redirectLocation);
-      values.push("shown");
-      values.push(cookieTime);
-      localStorage.setItem("mobileShown", values);
-    }
-
-    var clearValues = localStorage.getItem("mobileShown").split(";");
-
-    if (clearValues[1] < new Date()) {
-      localStorage.removeItem("mobileShown");
-    }
-  }
+if (document.getElementById("mobileFilterOpen")) {
+  var mobileFilterButton = document.getElementById("mobileFilterOpen");
+  var mobileMenuFilter = document.getElementById("mobileMenuFilter");
+  mobileFilterButton.addEventListener("click", function () {
+    mobileFilterButton.classList.toggle("filter--closed");
+    mobileFilterButton.classList.toggle("filter--opened");
+    mobileMenuFilter.classList.toggle("js--hidden");
+  });
 }

@@ -1,11 +1,5 @@
 <?php
-require_once(ABSPATH.'/mailer/src/PHPMailer.php');
-require_once(ABSPATH.'/mailer/src/Exception.php');
-require_once(ABSPATH.'/mailer/src/OAuth.php');
-require_once(ABSPATH.'/mailer/src/POP3.php');
-require_once(ABSPATH.'/mailer/src/SMTP.php');
 
-$email_from = 'wordpress@'.preg_replace('(https?://)', '', site_url());
 $email_to = get_field('mail', 'options');
 if ('disable_gutenberg') {
     add_filter('use_block_editor_for_post_type', '__return_false', 100);
@@ -13,24 +7,15 @@ if ('disable_gutenberg') {
     // отключим подключение базовых css стилей для блоков
     // ВАЖНО! когда выйдут виджеты на блоках или что-то еще, эту строку нужно будет комментировать
     remove_action('wp_enqueue_scripts', 'wp_common_block_scripts_and_styles');
-
-    // Move the Privacy Policy help notice back under the title field.
-    add_action('admin_init', function () {
-        remove_action('admin_notices', ['WP_Privacy_Policy_Content', 'notice']);
-        add_action('edit_form_after_title', ['WP_Privacy_Policy_Content', 'notice']);
-    });
 }
 
-remove_action('wp_head', 'print_emoji_detection_script', 7);
-remove_action('wp_print_styles', 'print_emoji_styles');
-
-
-add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
-function theme_name_scripts() {
-   wp_enqueue_style( 'style-name', get_stylesheet_uri() . "/style.css" );
-   wp_enqueue_style( 'style-name', get_stylesheet_uri() . "/main.min.css" );
-   wp_enqueue_style( 'style-name', get_stylesheet_uri() . "/assets/js/main.min.js" );
-   wp_enqueue_style( 'style-name', get_stylesheet_uri() . "/assets/js/main.js" );
+add_action('wp_enqueue_scripts', 'theme_name_scripts');
+function theme_name_scripts()
+{
+    wp_enqueue_style('style-name', get_stylesheet_uri() . "/style.css");
+    wp_enqueue_style('style-name', get_stylesheet_uri() . "/main.min.css");
+    wp_enqueue_style('style-name', get_stylesheet_uri() . "/assets/js/main.min.js");
+    wp_enqueue_style('style-name', get_stylesheet_uri() . "/assets/js/main.js");
 }
 
 add_action('wp_enqueue_scripts', 'project_scripts'); // хук автоматом сработает во время wp_head
@@ -42,7 +27,6 @@ function project_scripts()
     wp_register_script('plugins', get_stylesheet_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), null, true);
     wp_enqueue_script('plugins');
 }
-
 
 // настройки темы
 if (function_exists('acf_add_options_page')) {
@@ -61,4 +45,3 @@ add_theme_support('post-thumbnails');
 // кастомный размер миниатюры
 add_image_size('my-bg', 1200, 700, true);
 add_image_size('my-mini', 330, 330, true);
-
